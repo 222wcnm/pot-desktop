@@ -430,6 +430,22 @@
                 },
                 "qrcode": {
                     "title": "二维码识别"
+                },
+                "ollama_ocr": {
+                    "title": "Ollama OCR",
+                    "install_ollama": "无法连接到本地 Ollama，请先下载安装并启动 Ollama",
+                    "install_ollama_link": "Ollama 下载地址",
+                    "request_path": "请求地址",
+                    "model": "模型",
+                    "install_model": "安装",
+                    "ready": "就绪",
+                    "not_installed": "该模型还未安装，点击立即下载安装",
+                    "supported_models": "点击查看 Ollama 可用模型列表",
+                    "mode": "识别模式",
+                    "mode_text": "文字识别",
+                    "mode_formula": "公式识别",
+                    "mode_table": "表格识别",
+                    "prompt": "Prompt"
                 }
             },
             "tts": {

@@ -58,6 +58,11 @@ export default function Recognize(props) {
         } else {
             const newList = [...recognizeServiceInstanceList, instanceKey];
             setRecognizeServiceInstanceList(newList);
+            // 立即保存到 Store，绕过 debounce 延迟
+            import('../../../../../utils/store').then(({ store }) => {
+                store.set('recognize_service_list', newList);
+                store.save();
+            });
         }
     };
 
@@ -65,9 +70,8 @@ export default function Recognize(props) {
         <>
             <Toaster />
             <Card
-                className={`${
-                    osType === 'Linux' ? 'h-[calc(100vh-140px)]' : 'h-[calc(100vh-120px)]'
-                } overflow-y-auto p-5 flex justify-between`}
+                className={`${osType === 'Linux' ? 'h-[calc(100vh-140px)]' : 'h-[calc(100vh-120px)]'
+                    } overflow-y-auto p-5 flex justify-between`}
             >
                 <DragDropContext onDragEnd={onDragEnd}>
                     <Droppable

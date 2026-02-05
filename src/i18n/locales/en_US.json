@@ -430,6 +430,22 @@
                 },
                 "qrcode": {
                     "title": "QR Code"
+                },
+                "ollama_ocr": {
+                    "title": "Ollama OCR",
+                    "install_ollama": "Unable to connect to local Ollama, please download, install and start Ollama first",
+                    "install_ollama_link": "Download Ollama",
+                    "request_path": "Request Path",
+                    "model": "Model",
+                    "install_model": "Install",
+                    "ready": "Ready",
+                    "not_installed": "This model has not been installed yet, click to download and install now",
+                    "supported_models": "Click to see a list of Ollama available models",
+                    "mode": "Recognition Mode",
+                    "mode_text": "Text Recognition",
+                    "mode_formula": "Formula Recognition",
+                    "mode_table": "Table Recognition",
+                    "prompt": "Prompt"
                 }
             },
             "tts": {
